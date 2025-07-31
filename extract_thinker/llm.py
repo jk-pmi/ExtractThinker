@@ -174,8 +174,8 @@ class LLM:
             try:
                 result = asyncio.run(
                     self.agent.run(
-                        combined_prompt, 
-                        result_type=response_model if response_model else str
+                        combined_prompt,
+                        output_type=response_model if response_model else str,
                     )
                 )
                 return result.data
